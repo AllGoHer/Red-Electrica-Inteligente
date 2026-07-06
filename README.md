@@ -1,5 +1,8 @@
 # Red-Electrica-Inteligente
 ________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+![image](https://github.com/user-attachments/assets/86b18412-289e-4258-907b-dabfd5a2ddc2)
+
 📊 Descripción General del Proyecto
 Este proyecto implementa un pipeline de streaming en tiempo real de nivel producción para el monitoreo y análisis de redes eléctricas inteligentes. Simula un flujo completo de ingeniería de datos que ingiere, procesa y visualiza datos de la red eléctrica en tiempo real utilizando herramientas estándar de la industria.
 
@@ -339,6 +342,11 @@ bash:
 
       # Ver mensajes en Kafka
       docker exec smart_grid_kafka /opt/kafka/bin/kafka-console-consumer.sh --topic smartgrid --bootstrap-server localhost:9092 --from-beginning --max-messages 3
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+## 🧠 DESARROLLO DEL PROYECTO
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 
 
 
