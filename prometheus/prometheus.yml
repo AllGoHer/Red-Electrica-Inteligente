@@ -1,0 +1,25 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  # 1. Monitorear Prometheus mismo
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # 2. Monitorear Kafka
+  - job_name: 'kafka'
+    static_configs:
+      - targets: ['kafka:9092']
+
+  # 3. Monitorear Flink JobManager
+  - job_name: 'flink-jobmanager'
+    static_configs:
+      - targets: ['jobmanager:8081']
+
+  # 4. Monitorear Flink TaskManager
+  - job_name: 'flink-taskmanager'
+    static_configs:
+      - targets: ['taskmanager:8081']
+
