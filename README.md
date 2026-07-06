@@ -23,7 +23,23 @@ ________________________________________________________________________________
 ________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 ![image](https://github.com/user-attachments/assets/f9c5ac42-8b39-4078-8c76-9e1812286489)
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+## 🛠️ Tecnologías Utilizadas
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+| Componente | Tecnología |	Propósito |
+|------------|------------|-----------|
+| Broker de Streaming |	Apache Kafka | Ingesta de datos en tiempo real |
+| Procesamiento | Apache Flink SQL | Análisis en tiempo real |
+| Base de Datos | PostgreSQL | Almacenamiento persistente |
+| Monitoreo | Prometheus | Métricas de salud del sistema |
+| Visualización | Grafana |	Dashboards y análisis |
+| Orquestación | Docker Compose | Infraestructura local |
+| Generación de Datos | Python (Confluent Kafka) | Simulador de red eléctrica |
+
+
 ![image]()
+
 ![image]()
 
 ![image]()
