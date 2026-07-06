@@ -1,6 +1,5 @@
 # Red-Electrica-Inteligente
-__________________________________________________________________________________________________________________________________________________________________________________________________________________
-
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 📊 Descripción General del Proyecto
 Este proyecto implementa un pipeline de streaming en tiempo real de nivel producción para el monitoreo y análisis de redes eléctricas inteligentes. Simula un flujo completo de ingeniería de datos que ingiere, procesa y visualiza datos de la red eléctrica en tiempo real utilizando herramientas estándar de la industria.
 
@@ -56,13 +55,15 @@ ________________________________________________________________________________
 
 * Git
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 1: Clonar el Repositorio**
 
 bash:
 
       git clone https://github.com/tu-usuario/smart-grid-project.git
       cd smart-grid-project
-      
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 2: Levantar la Infraestructura**
 
 bash:
@@ -85,6 +86,7 @@ Esto inicia:
 
 * Kafka UI (puerto 8090)
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 3: Crear el Tema en Kafka**
 
 bash:
@@ -95,21 +97,23 @@ bash:
        --bootstrap-server localhost:9092 \
        --partitions 3 \
        --replication-factor 1
-       
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 4: Instalar Dependencias**
 
 bash:
 
       python -m pip install confluent-kafka
 
-
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 5: Ejecutar el Productor de Datos**
 
 bash:
 
       cd producer
       python smart_grid_producer_v2.py
-      
+
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 6: Descargar los Conectores de Flink**
 
 bash:
@@ -122,7 +126,7 @@ bash:
       exit
       docker-compose restart jobmanager taskmanager
 
-
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 7: Ejecutar el Procesamiento con Flink SQL**
 
 bash:
@@ -131,7 +135,7 @@ bash:
       cd /opt/flink
       ./bin/sql-client.sh -f /opt/flink/usrlib-sql/smart_grid.sql -j /opt/flink/lib/flink-sql-connector-kafka-1.17.0.jar
 
-
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Paso 8: Verificar los Resultados**
 
 bash:
@@ -204,9 +208,10 @@ json:
         "humidity_%": 74.9,
         "electricity_price_gbp_per_kwh": 0.091
       }
-      
-**Procesamiento en Streaming (Flink SQL)**
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________
+**Procesamiento en Streaming (Flink SQL)**
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 Flink SQL procesa los datos en tiempo real con:
 
 1. Ventanas deslizantes de 1 minuto para agregaciones
@@ -217,9 +222,10 @@ Flink SQL procesa los datos en tiempo real con:
 
 4. Validación de calidad de datos
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **Tablas de Salida**
 
-<mark>grid_metrics</mark> - **Métricas Agregadas**
+<mark>**grid_metrics**</mark> - **Métricas Agregadas**
 
 | Columna | Descripción |
 |---------|-------------|
@@ -230,7 +236,7 @@ Flink SQL procesa los datos en tiempo real con:
 | total_solar_generated | Energía solar total generada |
 | avg_price | Precio promedio de electricidad |
 
-<mark>grid_alerts</mark> - **Alertas en Tiempo Real**
+<mark>**grid_alerts**</mark> - **Alertas en Tiempo Real**
 
 | Columna | Descripción |
 |---------|-------------|
@@ -240,6 +246,7 @@ Flink SQL procesa los datos en tiempo real con:
 | power_kw | Potencia al momento de la alerta |
 | severity | Criticidad (ALTA, CRÍTICA) |
 
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 **💡 Características Principales**
 
 ✅ Streaming en Tiempo Real
@@ -282,7 +289,8 @@ bash:
       # Detener Flink SQL (Ctrl+C en la terminal de Flink)
       docker-compose down
 
-      
+______________________________________________________________________________________________________________________________________________________________________________________________________________
+
 **📚 Recursos y Referencias**
 
 * Documentación de Apache Kafka
@@ -297,14 +305,18 @@ bash:
 
 ________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-📬 Conéctate
-GitHub: [https://github.com/AllGoHer]
+**📬 Conéctate**
+________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-LinkedIn: [https://www.linkedin.com/in/allan-gonzales-heredia-13a557b5/]
+GitHub: https://github.com/AllGoHer
 
-Portfolio: [tu-portfolio-url]
+LinkedIn: https://www.linkedin.com/in/allan-gonzales-heredia-13a557b5/
 
-Construido con ❤️ y ☕ por <mark>**Allan Gonzales**</mark>
+Correo Electronico: allgoher007@gmail.com
+
+Portfolio: 
+
+Construido con ❤️ y ☕ por <mark>**Allan Gonzales Heredia**</mark>
 
 Última actualización: Julio 2026
 
